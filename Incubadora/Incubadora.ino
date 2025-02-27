@@ -3,8 +3,6 @@
 // Incubadora de huevos
 // 10/2/2025
 
-//#include "DigiKeyboard.h"
-
 int bombillo = 1;
 int termometro = A1;
 
@@ -18,11 +16,11 @@ void loop() {
   // Para un divisor de tensión perfecto se usa 640 como referencia a 37 grados
 
   int lectura = analogRead(termometro);
-  //DigiKeyboard.println(lectura);
+
   if(lectura < 345){
     digitalWrite(bombillo, LOW);
   }else if (lectura > 370){
     digitalWrite(bombillo, HIGH);
   }
-  //delay(1000);
+  delay(1000);
 }
